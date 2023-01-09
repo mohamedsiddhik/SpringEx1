@@ -1,0 +1,54 @@
+server:
+  port: 8082.0
+
+spring:
+  profiles:
+    active: qa
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: imdsar1234@@A
+    url: jdbc:mysql://localhost:3306/dcbapp
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to My First Spring Programsssss
+
+---
+
+spring:
+  profiles: qa
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: imdsar1234@@A
+    url: jdbc:mysql://localhost:3306/dcbapp-qa
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to My First Spring Programsssss
+
+---
+
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: imdsar1234@@A
+    url: jdbc:mysql://localhost:3306/dcbapp-prod
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to My First Spring Programsssss
